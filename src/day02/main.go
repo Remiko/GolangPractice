@@ -20,6 +20,7 @@ func main() {
 	h := 'h'  // 单个字符用''
 	i1 := "big"
 	i2 := "小白菜"
+	l := 'a'
 	fmt.Println(len(a))
 	fmt.Printf("%d\n", c)
 	fmt.Printf("%o\n", c)
@@ -43,4 +44,37 @@ func main() {
 	} else {
 		fmt.Println("不及格")
 	}
+	for k := 0; k >= 2; k++ {
+		fmt.Println(k)
+	}  // 1、for循环的初始语句可以被忽略，但是初始语句后的;必须要写.2、for循环的初始语句和结束语句都可以省略,并且两个;都不用写
+	// for {
+	// 	循环体语句
+	// }  for循环可以通过break、goto、return、panic语句强制退出循环。
+	switch {
+	case l == 'a':
+		fmt.Println("a")
+		fallthrough  // fallthrough语法可以执行满足条件的case的下一个case，是为了兼容C语言中的case设计的。
+	case l == 'b':
+		fmt.Println("b")
+	case l == 'c':
+		fmt.Println("c")
+	default:
+		fmt.Println("...")
+	}  // Go语言规定每个switch只能有一个default分支。一个分支可以有多个值，多个case值中间使用英文逗号分隔。
+	
+	// func gotoDemo2() {
+	// 	for i := 0; i < 10; i++ {
+	// 		for j := 0; j < 10; j++ {
+	// 			if j == 2 {
+	// 				// 设置退出标签
+	// 				goto breakTag
+	// 			}
+	// 			fmt.Printf("%v-%v\n", i, j)
+	// 		}
+	// 	}
+	// 	return
+	// 	// 标签
+	// breakTag:
+	// 	fmt.Println("结束for循环")
+	// }  goto的用法
 }
