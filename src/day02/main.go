@@ -8,7 +8,7 @@ import (
 
 var a = "haha"
 
-func main(){
+func main() {
 	var c int = 10
 	var b complex64 = 1 + 2i  // 复数类型
 	var d bool  // 1、布尔类型变量的默认值为false。2、Go 语言中不允许将整型强制转换为布尔型.3、布尔型无法参与数值运算，也无法与其他类型进行转换。
@@ -36,4 +36,11 @@ func main(){
 	runeS2 := []rune(i2)
 	runeS2[0] = '大'
 	fmt.Println(string(runeS2))
+	if j := 85; j >= 90 {  // if条件判断还有一种特殊的写法，可以在 if 表达式之前添加一个执行语句，再根据变量值进行判断
+		fmt.Println("优秀")
+	} else if j >= 60 || j < 90 {
+		fmt.Println("及格")
+	} else {
+		fmt.Println("不及格")
+	}
 }
