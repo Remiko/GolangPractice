@@ -1,1 +1,1 @@
-## It's practicing of golang code.
+## This is practicing of golang code.
