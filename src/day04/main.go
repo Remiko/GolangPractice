@@ -91,7 +91,7 @@ func intSum(a int, b int) (s int) {
 	return  // 或者写return s 推荐写完整
 }
 
-func intSpliceSum(a int, b ...int) int {
+func intSpliceSum(a int, b ...int) int {  // 固定参数和可变参数同时出现时，可变参数一定要放在最后面，并且参数a必须指定，参数b可以不写
 	s := 0
 	for _, v := range b {
 		s = s + v
